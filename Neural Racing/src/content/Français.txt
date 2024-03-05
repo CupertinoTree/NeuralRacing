@@ -1,0 +1,147 @@
+greenColor:Vert
+redColor:Rouge
+cyanColor:Cyan
+orangeColor:Orange
+greyColor:Gris
+purpleColor:Violet
+neonBlueColor:Bleu néon
+blackColor:Noir
+yellowColor:Jaune
+pinkColor:Rose
+noImages:Les images du jeu sont introuvables.
+error:Erreur
+defaultRace:Circuit par défaut
+raceSaveError:Les circuits n'ont pas pu être sauvegardés.
+indivSaveError:Les individus n'ont pas pu être sauvegardés.
+data:Données
+waiting:Attente
+yes:Oui
+no:Non
+menu:Menu
+save:Sauver
+fading:Fondu
+hitbox:Tracé
+jingle:Voix
+music:Musique
+author:Logiciel par Ronan Clemente, 2019
+races:Circuits
+race:circuit
+indivs:Individus
+indiv:individu
+rename:Renommer
+renameError:Vous ne pouvez pas renommer ce circuit.
+renameError1:Vous ne pouvez pas renommer cet individu.
+giveAName:Donnez un nom à votre
+message:Message
+an:Un
+alreadyExists:porte déjà ce nom. Voulez-vous le remplacer ?
+ifCancel:Si vous refusez, le processus sera abandonné.
+warning:Attention
+destroy:Supprimer
+destroyError:Vous ne pouvez pas supprimer ce circuit.
+destroyError1:Vous ne pouvez pas supprimer cet individu.
+destroyConfirm:Voulez-vous vraiment supprimer
+thisRace:ce circuit
+thisIndiv:cet individu
+wrongRpz:La représentation est incorrecte
+bracketLack:Parenthèse manquante
+twoStart:Il ne peut pas y avoir plusieurs points de départ sur un circuit
+unknownBox:Type de case non reconnu
+tubeLack:Séparateur manquant
+angleInt:L'orientation doit être un chiffre
+angleItvS:L'orientation doit être comprise entre 0 et 1 pour une ligne droite
+angleItvL:L'orientation doit être comprise entre 0 et 3 pour
+aTurn:un virage
+aStartLine:une ligne de départ
+nonStraightItv:On ne peut pas créer d'ensembles autres que les lignes droites
+intItvBounds:Les bornes de l'ensemble doivent être des chiffres
+rowItv:Les lignes doivent être comprises entre 0 et 7
+rowIntFail:Les numéros de ligne ne sont pas des nombres
+columnItv:Les colonnes doivent être comprises entre 0 et 9
+columnIntFail:Les numéros de colonne ne sont pas des nombres
+gridSupport:On ne peut créer d'ensemble bidimensionnel
+normalItv:On ne peut créer d'ensemble s'étalant dans le sens normal à celui des routes
+startLack:Un circuit doit avoir une ligne de départ
+evolutionTitle:Évolution
+evolutionTitleExtended:Évolution génétique
+experimentsTitle:Expériences
+raceEditorTitle:Circuit
+raceEditorTitleExtended:Éditeur de circuit
+optionsTitle:Options
+manage:Gérer
+editRace:Modifier un circuit
+importRace:Importer un circuit
+saveRace:Sauvegarder le circuit
+exportRace:Exporter le circuit
+straightTile:Ligne droite
+curvedTile:Virage
+grassTile:Herbe
+startTile:Ligne de départ
+neuralRacingRace:Circuit de Neural Racing
+info:Information
+openFileFail:Le fichier n'a pas pu être ouvert.
+chooseRace:Choisissez un circuit.
+chooseIndiv:Choisissez un individu.
+chooseIndivShort:Choisir un individu
+chooseLanguage:Choisissez une langue.
+new:nouveau
+saveFileSuccess:Le fichier a bien été sauvegardé.
+saveFileFail:Le fichier n'a pas pu être sauvegardé.
+tileType:Type de case
+orientation:Orientation
+tools:Outils
+fill:Remplir
+copy:Copier
+paste:Coller
+cut:Couper
+startOver:Recommencer
+champion:Champion
+speedOrder:La vitesse minimum doit être strictement inférieure à la vitesse maximum.
+nbrOrder:Le nombre d'individus à insérer doit être inférieur à la taille de la population.
+params:Paramètres
+beforeStart:Avant le départ
+insert:Insérer
+otherSettings:Autres réglages
+includeChampion:Inclure le champion
+showData:Afficher les données
+time:Temps
+size:Effectif
+minSpeed:Vitesse min
+maxSpeed:Vitesse max
+tournament:Brassage social
+mutationRate:Mutation
+generation:Génération
+score:Score
+average:Moyenne
+giveUp:Êtes-vous sûr de vouloir continuer ? Le processus d'évolution en cours sera perdu.
+giveUpRace:Êtes-vous sûr de vouloir continuer ? Toutes les modifications seront perdues.
+remove:Retirer
+humanDriver:Conducteur humain
+noSelection:Pas de sélection
+mutate:Muter
+lab:Laboratoire
+addDriver:Ajouter une voiture
+reproduce:Reproduire
+reproduction:Reproduction
+newCar:Nouvelle voiture
+brkp1:Choisissez le conducteur du véhicule !
+brkp2:Si vous ajoutez un conducteur humain, vous pourrez contrôler vous même sa voiture à l'aide du clavier.
+brkp3:La flèche du haut permet d'accélérer, celle du bas de freiner.
+brkp4:Les flèches gauche et droite font tourner la voiture dans le sens qu'elles indiquent.
+select1Indiv:Veuillez d'abord sélectionner un individu.
+select2Indiv:Veuillez d'abord sélectionner deux individus.
+firstIndivLost:Le premier individu sélectionné est introuvable.
+scdIndivLost:Le deuxième individu sélectionné est introuvable.
+indivLost:L'individu sélectionné est introuvable.
+successfulOp:L'opération a été effectuée avec succès.
+giveANameIndiv:Donnez un nom à votre nouvel individu !
+language:Langue
+contentTextNotFound:Les textes du jeu sont introuvables ou illisibles.
+guide:Guide
+usageSection:EN PRATIQUE
+icons:Icônes
+theorySection:EN THÉORIE
+carsAndTracksTitle:Voitures et circuits
+neuralNetworksTitle:Réseaux de neurones
+geneticAlgorithmTitle:Algorithme Génétique
+defaultIndiv:Polyvalent

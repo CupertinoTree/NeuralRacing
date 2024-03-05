@@ -1,0 +1,147 @@
+greenColor:Green
+redColor:Red
+cyanColor:Cyan
+orangeColor:Orange
+greyColor:Grey
+purpleColor:Purple
+neonBlueColor:Neon blue
+blackColor:Black
+yellowColor:Yellow
+pinkColor:Pink
+noImages:The game’s images are nowhere to be found.
+error:Error
+defaultRace:Default racetrack
+raceSaveError:Your racetracks couldn’t be saved.
+indivSaveError:Your individuals couldn’t be saved.
+data:Data
+waiting:Waiting
+yes:Yes
+no:No
+menu:Menu
+save:Save
+fading:Fading
+hitbox:Hitbox
+jingle:Voice
+music:Music
+author:Developed by Ronan Clemente, 2019
+races:Tracks
+race:racetrack
+indivs:Individuals
+indiv:individual
+rename:Rename
+renameError:You are not allowed to rename this racetrack.
+renameError1:You are not allowed to rename this individual.
+giveAName:Give a name to your
+message:Message
+an:An
+alreadyExists:already has this name. Do you want to replace it?
+ifCancel:If you consider declining, note that the process will be discontinued.
+warning:Warning
+destroy:Delete
+destroyError:You are not allowed to delete this racetrack.
+destroyError1:You are not allowed to delete this individual.
+destroyConfirm:Are you sure you want to delete
+thisRace:this racetrack
+thisIndiv:this individual
+wrongRpz:The representation is incorrect
+bracketLack:Missing bracket.
+twoStart:A single racetrack can't have multiple starting points
+unknownBox:Unknown box type
+tubeLack:Missing separator
+angleInt:The orientation has to be an integer
+angleItvS:The orientation must be between 0 and 1 for a straight line
+angleItvL:The orientation must be between 0 and 3 for
+aTurn:a turn
+aStartLine:a start line
+nonStraightItv:You cannot create a set of boxes that aren’t straight lines
+intItvBounds:The bounds of the set have to be integers
+rowItv:The rows must be between 0 and 7
+rowIntFail:The rows have to be integers
+columnItv:The columns must be between 0 and 9
+columnIntFail:The columns have to be integers
+gridSupport:You cannot create a two-dimensional set
+normalItv:You cannot create a set whose direction is perpendicular to that of its roads
+startLack:A racetrack must include a start line
+evolutionTitle:Evolution
+evolutionTitleExtended:Genetic Evolution
+experimentsTitle:Experiments
+raceEditorTitle:Racetrack
+raceEditorTitleExtended:Racetrack Editor
+optionsTitle:Options
+manage:Manage
+editRace:Edit a racetrack
+importRace:Import a racetrack
+saveRace:Save the racetrack
+exportRace:Export the racetrack
+straightTile:Straight line
+curvedTile:Turn
+grassTile:Grass
+startTile:Start line
+neuralRacingRace:Neural Racing Racetrack
+info:Information
+openFileFail:The file couldn’t be opened.
+chooseRace:Choose a racetrack.
+chooseIndiv:Choose an individual.
+chooseIndivShort:Choose an individual
+chooseLanguage:Choose a language.
+new:new
+saveFileSuccess:The file has been successfully saved.
+saveFileFail:The file couldn’t be saved.
+tileType:Box type
+orientation:Orientation
+tools:Tools
+fill:Fill
+copy:Copy
+paste:Paste
+cut:Cut
+startOver:Start Over
+champion:Champion
+speedOrder:The minimum speed must be strictly lower than the maximum speed.
+nbrOrder:The number of individuals to insert must be lower than the population size.
+params:Settings
+beforeStart:Before the start
+insert:Insert
+otherSettings:Other settings
+includeChampion:Include champion
+showData:Show data
+time:Time
+size:Count
+minSpeed:Min speed
+maxSpeed:Max speed
+tournament:Social mixing
+mutationRate:Mutation
+generation:Generation
+score:Score
+average:Average
+giveUp:Are you sure you want to continue? The ongoing evolution process will be lost.
+giveUpRace:Are you sure you want to continue? All changes will be lost.
+remove:Remove
+humanDriver:Human driver
+noSelection:No selection
+mutate:Mutate
+lab:Laboratory
+addDriver:Add a car
+reproduce:Reproduce
+reproduction:Reproduction
+newCar:New car
+brkp1:Choose the driver of the car!
+brkp2:If you choose a human driver, you will be able to control the car using your keyboard.
+brkp3:The up arrow allows you to accelerate, and the down arrow to break.
+brkp4:The left and right arrows allow you to turn the car in the direction that they indicate
+select1Indiv:Please select an individual first.
+select2Indiv:Please select two individuals first.
+firstIndivLost:The first selected individual is nowhere to be found.
+scdIndivLost:The second selected individual is nowhere to be found.
+indivLost:The selected individual is nowhere to be found.
+successfulOp:The operation was successfully done.
+giveANameIndiv:Give a name to your new individual !
+language:Idiom
+contentTextNotFound:Could not find the content text file.
+guide:Guide
+usageSection:USAGE
+icons:Icons
+theorySection:THEORY
+carsAndTracksTitle:Cars and tracks
+neuralNetworksTitle:Neural networks
+geneticAlgorithmTitle:Genetic Algorithm
+defaultIndiv:Polyvalent

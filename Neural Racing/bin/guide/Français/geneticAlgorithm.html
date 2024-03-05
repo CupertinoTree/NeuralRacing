@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Théorie</h1>
+    <hr>
+    <h2>Algorithme Génétique</h2>
+
+    <p>L'algorithme génétique est un processus inspiré par la sélection naturelle. Il fonctionne avec des <strong>générations</strong> succesives. Durant une génération, on a une <strong>population</strong> composée d'individus qui ont chacun des gènes. Chaque individu va être évalué pendant sa vie et recevoir un score de <strong>fitness</strong>. A la fin de la génération, on reproduit les individus entre eux. C'est là que la sélection peut avoir lieu : plus un individu à un score élevé, plus il a de chances de se reproduire. On applique ensuite des <strong>mutations</strong> aléatoires aux génomes des individus, et on commence la génération suivante.</p>
+
+    <h4>Individus</h4>
+
+    <p>Un individu correspond à une voiture et son conducteur, qui est lui-méme un réseau de neurones. Chacune de ses connexions représente un gène. Pour plus d'informations, référez vous à la partie du guide portant sur les <strong>Réseaux de neurones</strong>.</p>
+
+    <h4>Population</h4>
+
+    <p>La population initiale est composée d'individus générés aléatoirement. Les populations qui suivent sont un produit de la reproduction de la population précédente.</p>
+
+    <h4>Fitness</h4>
+
+    <p>Les individus gagnent un point à chaque fois qu'ils franchissent une nouvelle ligne de récompense. Pour plus d'informations, référez vous à la partie du guide portant sur les <strong>Voitures et circuits</strong>.</p>
+
+    <h4>Reproduction</h4>
+
+    <p>
+      Le processus de reproduction fonctionne en deux temps :
+      <br><br>
+      <strong>- Sélectionner :</strong>
+      <br>
+      On veut trouver deux parents en privilégiant les individus les plus performants. Pour éviter de prendre toujours les mêmes, on va utiliser le concept de <strong>Brassage social</strong>. On prend un sous-groupe de la population, choisi aléatoirement, et on en extrait l'individu avec le plus haut fitness. On répète l'opération dans un autre sous-groupe pour obtenir le deuxième parent. <strong>NB :</strong> le paramètre se règle dans l'onglet Évolution sous forme de pourcentage, qui correspond à la taille des sous-groupes par rapport à la population totale. <strong>Baisser ce paramètre, c'est ajouter de la diversité</strong>.
+      <br><br>
+
+      <strong>- Mélanger :</strong>
+      <br>
+      L'étape de reproduction s'inspire de la nature dans une version très simplifiée. Pour chaque gène, on a une chance sur deux d'hériter de celui du parent 1. Il n'y a pas ici d'organisation en chromosomes par exemple.
+      <br><br>
+
+      On répètera le processus jusqu'à avoir le bon nombre d'individus dans la population suivante.
+    </p>
+
+    <h4>Mutation</h4>
+
+    <p>On introduit des mutations dans les gènes de chacun des individus. Le taux de mutation correspond à <strong>la probabilité pour chaque gène d'être remplacé par une valeur aléatoire</strong>.</p>
+
+    <h2>Parallèle avec notre monde</h2>
+
+    <h4>Environnement</h4>
+
+    <p>L'environnement dans le cadre de Neural Racing correspond aux circuits. Des individus bien adaptés à un circuit ne le seront pas du tout dans d'autres.</p> <p class="green_paragraph"> Essayez de changer les individus de circuit dans l'onglet Expériences !</p>
+
+    <h4>Phénotype</h4>
+
+    <p>Les phénotypes des individus dans le cadre de Neural Racing peuvent s'observer sous formes de compétences. Sur un circuit qui commence par un virage à gauche par exemple, les individus auront rapidement le phénotype "Savoir tourner à gauche" mais seront inaptes à gérer un virage à droite. De même, parce que le temps est limité, certains individus gagneront des points en accélérant dans les lignes droites. </p> <p class="green_paragraph"> Dans l'onglet Évolution, insérez un individu avec un certain phénotype sur un circuit légèrement différent pour élargir les compétences des individus. A force d'itérations, vous aurez un individu adapté à de nombreux environnements !</p>
+
+    <h4>Diversité génétique</h4>
+
+    <p>On peut facilement explorer ce concept grâce aux paramètres de <strong>Mutation</strong> et de <strong>Brassage social</strong>. Désactivez <strong>Inclure le champion</strong>, puis essayez de changer les paramètres. Par exemple avec un taux de mutation de 100%, vous aurez des résultats purement aléatoires. À 0%, vous aurez une convergence des individus vers un même génome, qui se manifestera par un pic sur l'histogramme.</p>
+
+  </body>
+</html>

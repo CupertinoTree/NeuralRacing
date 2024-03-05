@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Théorie</h1>
+   	<hr>
+    <h2>Bases</h2>
+
+    <p>Comme expliqué dans d'autres parties du guide, un individu correspond à une voiture et à son conducteur. Chaque individu a donc son propre réseau de neurones, qui lui permet de prendre des décisions de pilotage.</p>
+
+    <h4>Technique globale</h4>
+
+    <p>Les modèles utilisés sont des réseaux de neurones à propagation avant. Ce sont donc des réseaux très simples. 
+      <br>
+      Commençons par quelques définitions :
+      <ul>
+        <li>Un <strong>neurone</strong> a une valeur et des connexions à d'autres neurones.</li>
+        <li>Une <strong>couche</strong> correspond à un ensemble de neurones situés au même "niveau" du réseau. Ils ne sont donc pas reliés entre eux. En revanche tous les neurones d'une couche sont reliés aux neurones de la couche suivante.</li>
+        <li>Une <strong>connexion</strong> relie deux neurones avec un poids, entre -1 et 1. Lorsqu'un neurone transmet sa valeur au neurone suivant, cette dernière est multipliée par le poids de la connexion.</li>
+        <li>La <strong>propagation avant</strong> correspond à l'avancée des valeurs dans le réseau. D'abord, on attribue des valeurs à la première couche. Ensuite, elles passent de neurone en neurone, pondérées par les connexions entre eux, jusqu'à la dernière couche du réseau.</li>
+      </ul>
+    </p>
+
+    <p>Voici une image pour mieux comprendre :</p>
+
+    <p style="text-align:center">
+          <img src="../nnet.png" width="232" height="256">
+          <br>
+          <i>Un réseau de neurones. Une connexion est verte si elle est positive, orange si elle est négative. La valeur absolue de chaque connexion est représentée par son épaisseur. Si elle a la valeur 0, elle n'est pas affichée.</i>
+    </p >
+
+    <p>On remarque quatre colonnes de neurones, qui correspondent aux couches. 
+      <ul> 
+        <li>La première, la couche d'entrée, est composée de 6 neurones. Les 5 premiers reçoivent les valeurs de chacune des caméras de la voiture (entre 0 et 1), et le dernier reçoit la vitesse (idem).</li>
+
+        <li>La dernière, la couche de sortie, est composée de 4 neurones, qui correspondent dans l'ordre à <i>Tourner à gauche</i>, <i>Tourner à droite</i>, <i>Accélérer</i> et <i>Freiner</i>.</li>
+
+        <li>Entre les deux, les couches intermédiaires propagent les valeurs selon les connexions du réseau.</li>
+      </ul>
+    </p>
+
+    <h4>Calcul pour un neurone</h4>
+
+    <p>
+      Les neurones de la couche d'entrée ne sont pas concernés car leur valeur leur est assignée.
+      <br>
+      Pour les autres, la valeur d'un neurone correspond à la somme des valeurs des neurones de la couche précédente, pondérées par leur connexion au présent neurone. Pour éviter que la valeur d'un neurone du réseau ne devienne trop grande par rapport aux autres, cette somme pondérée est ensuite passée à travers une <strong>fonction d'activation</strong>. Elle sert à maintenir les valeurs entre -1 et 1. On utilise ici la fonction Tangente Hyperbolique.
+    </p>
+
+    <h4>Pilotage</h4>
+
+    <p>
+      Le réseau de neurones propage donc les valeurs des caméras et la vitesse de la voiture, et les analyse jusqu'à la couche de sortie. On défini arbitrairement que son choix de pilotage correspond au neurone de sortie avec la valeur la plus élevée.
+      <br>
+      Par exemple, un bon conducteur donnera au neurone <i>Freiner</i> la plus grande valeur quand un obstacle se trouve devant. <strong>Ce sont ses connexions qui lui permettront de prendre les bonnes décisions</strong>
+    </p>
+
+    <p class="green_paragraph">D'où viennent les connexions des réseaux de neurone ?</p>
+
+    <p>Il est impossible pour un être humain de savoir quelles connexions donner au réseau pour qu'il conduise bien. On commence donc avec des réseaux générés aléatoirement. Néanmoins, <strong>un individu donné n'apprendra jamais de ses erreurs</strong> dans le cadre de ce logiciel. Nous détaillerons cela dans la partie suivante.</p>
+
+    <h2>Application</h2>
+
+    <h4>Individu</h4>
+
+    <p>
+      Un individu tel que défini précédemment doit pouvoir trouver sa place au sein d'une population, pour que l'évolution puisse se produire. Il doit pour cela avoir un <strong>génome</strong>. Chaque connexion de son réseau doit donc être considérée comme un gène. Ainsi, ses caractéristiques de pilotage sont assimilables à des phénotypes.
+      <br>
+      Chaque individu reçoit ses gènes soit aléatoirement à la génération 0, soit de ses parents. Ils ne changent jamais au cours de sa vie, ainsi l'individu n'apprend pas. Une amélioration des conducteurs au cours du temps vient forcément de l'évolution génétique. Plus d'information dans la partie du guide portant sur l'<strong>Algorithme Génétique</strong>.
+    </p>
+
+    <h4>Cycle de vie</h4>
+
+    <p>A chaque instant au cours de sa vie, l'individu reçoit les données de sa voiture et prend des décisions, ainsi que décrit plus haut. Plus il parcourt de distance, et plus il aura de chances de se reproduire.</p>
+
+    <h4>Sauvegarde</h4>
+
+    <p>Chaque réseau de neurones peut-être exporté sous une forme textuelle, qui décrit toute son architecture et ses connexions. Cela permet de sauvegarder des individus pendant l'évolution, pour les insérer dans une nouvelle population ou dans l'onglet <strong>Expériences</strong>.</p>
+
+  </body>
+</html>

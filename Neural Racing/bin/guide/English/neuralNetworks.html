@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Theory</h1>
+   	<hr>
+    <h2>Basics</h2>
+
+    <p>As explained in other parts of the guide, an individual corresponds to a car and its driver. Each individual therefore has its own neural network, which allows it to make driving decisions.</p>
+
+    <h4>Global Technique</h4>
+
+    <p>The models used are feedforward neural networks. These are very simple networks.
+      <br>
+      Let's start with some definitions:
+      <ul>
+        <li>A <strong>neuron</strong> has a value and connections to other neurons.</li>
+        <li>A <strong>layer</strong> corresponds to a set of neurons located at the same "level" of the network. They are therefore not connected to each other. However, all neurons in a layer are connected to neurons in the next layer.</li>
+        <li>A <strong>connection</strong> binds two neurons with a weight, between -1 and 1. When a neuron transmits its value to the next neuron, it is multiplied by the weight of the connection.</li>
+        <li>The <strong>feedforward</strong> corresponds to the propagation of values in the network. First, values are assigned to the first layer. Then, they pass from neuron to neuron, weighted by the connections between them, until the last layer of the network.</li>
+      </ul>
+    </p>
+
+    <p>Here is an image to better understand:</p>
+
+    <p style="text-align:center">
+          <img src="../nnet.png" width="232" height="256">
+          <br>
+          <i>A neural network. A connection is green if it is positive, orange if it is negative. The absolute value of each connection is represented by its thickness. If it has a value of 0, it is not displayed.</i>
+    </p >
+
+    <p>We notice four columns of neurons, which correspond to the layers.
+      <ul> 
+        <li>The first one, the input layer, consists of 6 neurons. The first 5 receive the values from each of the car's cameras (between 0 and 1), and the last one receives the speed (same).</li>
+
+        <li>The last one, the output layer, consists of 4 neurons, which correspond in order to <i>Turn left</i>, <i>Turn right</i>, <i>Accelerate</i>, and <i>Brake</i>.</li>
+
+        <li>Between the two, the intermediate layers propagate the values according to the network connections.</li>
+      </ul>
+    </p>
+
+    <h4>Calculation for a Neuron</h4>
+
+    <p>
+      Neurons in the input layer are not concerned because their value is assigned to them.
+      <br>
+      For the others, the value of a neuron corresponds to the sum of the values of the neurons in the previous layer, weighted by their connection to the present neuron. To prevent a neuron's value in the network from becoming too large compared to others, this weighted sum is then passed through an <strong>activation function</strong>. It serves to keep values between -1 and 1. Here, we use the Hyperbolic Tangent function.
+    </p>
+
+    <h4>Driving</h4>
+
+    <p>
+      The neural network therefore propagates the values from the cameras and the car's speed, and analyzes them up to the output layer. We arbitrarily define that its driving choice corresponds to the output neuron with the highest value.
+      <br>
+      For example, a good driver will give the <i>Brake</i> neuron the highest value when an obstacle is in front. <strong>It is its connections that allow it to make the right decisions</strong>.
+    </p>
+
+    <p class="green_paragraph">Where do the connections of neural networks come from?</p>
+
+    <p>It is impossible for a human being to know what connections to give to the network for it to drive well. Thus, we start with randomly generated networks. However, <strong>an individual will never learn from its mistakes</strong> in the context of this software. We will detail this in the next section.</p>
+
+    <h2>Application</h2>
+
+    <h4>Individual</h4>
+
+    <p>
+      An individual as defined earlier must be able to find its place within a population, so that evolution can occur. It must therefore have a <strong>genome</strong>. Each connection in its network must therefore be considered as a gene. Thus, its driving characteristics are assimilable to phenotypes.
+      <br>
+      Each individual receives its genes either randomly at generation 0, or from its parents. They never change during its life, so an individual does not learn. An improvement in drivers' skills over time necessarily comes from genetic evolution. More information in the part of the guide about the <strong>Genetic Algorithm</strong>.
+    </p>
+
+    <h4>Life Cycle</h4>
+
+    <p>At each moment during its life, the individual receives data from its car and makes decisions, as described above. The more distance it covers, the more chances it has of reproducing.</p>
+
+    <h4>Save</h4>
+
+    <p>Each neural network can be exported in a textual form, which describes its entire architecture and connections. This allows you to save individuals during evolution, to insert them into a new population or in the <strong>Experiments</strong> tab.</p>
+
+  </body>
+</html>

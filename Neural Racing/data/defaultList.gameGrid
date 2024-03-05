@@ -1,0 +1,1 @@
+Poly:curved(0|0|0);curved(3|0|5);curved(0|2|1);curved(3|2|2);curved(1|4|5);curved(3|4|7);curved(1|5|2);curved(2|5|7);curved(1|6|1);start(3|6|6);curved(3|6|7);curved(1|9|0);curved(2|9|7);straight(0|1-8|0);straight(0|1-3|5);straight(0|3-5|1);straight(0|3-4|2);straight(0|7-8|7);straight(1|0|1-4);straight(1|4|6);straight(1|5|3-6);straight(1|6|2-5);straight(1|9|1-6);

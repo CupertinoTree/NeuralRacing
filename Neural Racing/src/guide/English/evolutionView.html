@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Usage</h1>
+    <p>In this tab, you can observe and influence the genetic evolution of a population of individuals over successive generations.</p>
+
+      <hr>
+    <h2>Header</h2>
+
+    <h4>Tracks</h4>
+    <p>The <strong>Tracks</strong> button allows you to choose a track from your personal list.</p>
+
+    <hr>
+    <h2>Toolbar</h2>
+
+    <h4>Generation Counter</h4>
+    <p>It displays the generation number of the population that is currently navigating the circuit. It increases by one each time the entire population has lost, or when <strong>time is up</strong>.</p>
+
+    <h4>Time Controller</h4>
+    <p>It displays the playback speed. The double arrows on either side allow you to increase or decrease this speed.
+      <br>
+      The <strong>Play/Pause</strong> button allows you to start or pause the race.
+      <br>
+      The <strong>Start Over</strong> button clears all data related to the current process. Evolution parameters are reset, and <strong>those of the Before the start section become modifiable again</strong>.
+    </p>
+
+    <h4>Selector</h4>
+    <p>The selector allows you to choose between displaying an <strong>evolutionary parameters</strong> tab and a <strong>statistics</strong> tab.</p>
+
+    <h4>Parameters</h4>
+
+    <h5>Before the start:</h5>
+    <p class="sub_paragraph">The parameters in this section are, as its name suggests, <strong class="red_paragraph">only modifiable before the start of evolution</strong>. To access it again, it will be necessary to click on the <strong>Start Over</strong> button.
+    <br>
+    <ul>
+      <li>The <strong>count</strong> slider defines the number of individuals in the population.</li>
+      <li>The sliders for <strong>minimum</strong> and <strong>maximum speed</strong> allow you to modify the speed limits of the cars.</li>
+      <li>The <strong>Insert</strong> button allows you to add one (or more, by repeating the action) of your individuals to the first population of the evolutionary process.</li>
+  </ul>
+  </p>
+
+    <h5>Other Settings:</h5>
+
+    <p class="sub_paragraph">The parameters in this section are accessible at any time during evolution.
+    <br>
+    <ul>
+      <li>The <strong>Mutation rate</strong>. For more information, see the part of the guide explaining the <strong>Genetic Algorithm</strong>.</li>
+
+      <li>The <strong>Social Mixing</strong>. For more information, see the part of the guide explaining the <strong>Genetic Algorithm</strong>.</li>
+
+      <li>The <strong>Time</strong> slider corresponds to the maximum duration allocated to each generation: when time is up, even if not all cars have been eliminated, the current generation ends.</li>
+    
+      <li>The <strong>Include Champion</strong> option does not model a natural mechanism, but it is still particularly convenient. When activated, the best individual of each generation is directly inserted into the next one. Thus, the best score never decreases. If the parameters are poorly adjusted and this option is disabled, you could see decreases in the score (for example with a mutation rate of 100%, in which case the scores would be purely random).</li>
+    </ul>
+  </p>
+
+    <h4>Statistics</h4>
+    <p>Note that the data displayed in this section correspond to that of the previous generation: it would be impossible to obtain definitive statistics on the generation currently being evaluated.
+    <br>
+    <br>
+    The <strong>best score</strong> is displayed first. It corresponds to the number of tiles traveled by the champion of the previous generation.
+    <br>
+    <br>
+    Then, a graph shows the curve of best score per generation. You can thus observe the effectiveness of the evolution process. Note that the graph only starts to fill in from generation 2, because two points are necessary to draw the first straight segment. 
+    The <strong>Show Data</strong> button opens a window presenting the graph data in the form of a table.
+    <br>
+    <br>
+    Below, the <strong>average</strong> score in the population is presented.
+    <br>
+    <br>
+    A second graph works like a connected histogram. It gives an overview of the score distribution in the population, expressing for each score <strong>the percentage of the population that obtained it</strong>.
+    <br>
+    Again, a show data button is available.
+    <br>
+    <br>
+    Finally, a view presents the neural network of the current champion. For more information, see the part of the guide on <strong>Neural Networks</strong>. A <strong>Save</strong> button allows you to save the champion, and to name it.</p>
+
+    <p class="green_paragraph">When I press a Show Data button, the evolution is paused. Is this normal?</p>
+    <p>Yes, it pauses automatically. By making sure you don't miss a single moment of the process, we aim to make your experience better. You can restart it using the play button.</p>
+  </body>
+</html>

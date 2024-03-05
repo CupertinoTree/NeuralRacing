@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Utilisation</h1>
+    <p>Cet onglet vous permet de créer et de modifier des circuits.</p>
+    <hr>
+    <h2>En-tête</h2>
+    <h4>Gérer</h4>
+    <p>Le bouton <strong>Gérer</strong> permet d’éditer un circuit déjà existant, ou d'en sauvegarder un nouveau. Un menu s’ouvre, et quatre choix sont proposés : 
+        <ul>
+            <li> <strong>Modifier un circuit</strong> offre la possibilité de choisir le circuit parmi ceux contenus dans votre liste personnelle </li>
+            
+            <li> <strong>Importer un circuit</strong> permet de se servir d’un fichier externe, par exemple partagé par un ami. </li>
+            
+            <li> <strong>Sauvegarder le circuit</strong> offre la possibilité d’ajouter le circuit à votre liste personnelle </li>
+            
+            <li> <strong>Exporter le circuit</strong> permet de sauvegarder le fichier dans le répertoire choisi par l’utilisateur, par exemple dans le but de le partager à un ami. </li>
+        </ul>
+    </p>
+      
+    <p class="green_paragraph">Comment puis-je éditer un circuit existant sans en créer un nouveau par la suite ?</p>
+    <p>Si vous sauvegardez le circuit modifié dans votre liste personnelle en lui donnant son nom d’origine, la nouvelle version remplacera tout simplement l’ancienne.</p>
+    <hr>
+    <h2>Barre d'outils</h2>
+    <h4>Sélecteur</h4>
+    <p>Le sélecteur en haut de la barre d’outils permet de choisir entre un mode <strong>Case</strong> et un mode <strong>Surface</strong>. 
+        <br> Le premier permet de placer la case choisie aux endroits où l’utilisateur clique, ou bien de placer cette case à tous les endroits balayés par le curseur en cas de clic prolongé. 
+        <br> Le deuxième permet d’effectuer des actions sur toutes les cases d’une zone de la grille sélectionnée par l’utilisateur. Ces actions sont disponibles en bas de la barre d’outils, uniquement dans ce mode.</p>
+
+        <p style="text-align:center">
+          <img src="../zone.png" width="300" height="300">
+          <br>
+          <i>Une sélection en mode surface.</i>
+        </p >
+
+    <h4>Type de case</h4>
+    <p>En cliquant sur l’image de la case sélectionnée, un menu déroulant apparaît et permet d’en choisir une autre. L’utilisateur peut choisir entre quatre types de case : <strong>Ligne Droite</strong>, <strong>Virage</strong>, <strong>Ligne de départ</strong>, et <strong>Herbe</strong>.</p>
+    <h4>Orientation</h4>
+    <p>L’utilisateur peut appliquer une rotation de 90° vers la droite ou vers la gauche à la case choisie.</p>
+    <h4>Outils</h4>
+    <p>Les boutons situés en bas de la barre d'outils apparaissent en mode surface. 
+            <ul>
+                <li>Le bouton <strong>Remplir</strong> permet de remplacer l'ensemble des cases de la zone sélectionnée par la case choisie.</li>
+                <li>Le bouton <strong>Copier</strong> permet de maintenir en mémoire les cases de la zone sélectionnée.</li>
+                <li>Le bouton <strong>Coller</strong> permet ensuite de remplacer les cases d'une zone sélectionnée par celles maintenues en mémoire.</li>
+                <li>Le bouton <strong>Couper</strong> effectue lui-aussi une action de copie, mais remplace les cases copiées par de l'herbe.</li>
+                </p>
+            </ul>
+    <p class="green_paragraph">Que se passe-t-il si je copie une zone d'une certaine taille, puis que je tente de la coller dans une zone d'une autre taille ?</p>
+    <p>Si la zone de collage est plus petite que la zone copiée, seule une partie des cases seront collées. Dans le cas inverse, le collage sera effectué normalement, en ignorant l'excédent de zone de collage.</p>
+    <hr>
+    <h2>Vue principale</h2>
+    <h4>En mode case</h4>
+    <p>La case choisie est placée aux endroits où l'utilisateur clique. En cas de clic prolongé, la case choisie sera placée à tous les endroits balayés par le curseur.</p>
+    <h4>En mode surface</h4>
+    <p>Maintenez le curseur puis déplacez le pour <strong>sélectionner</strong> une zone. Vous pouvez ensuite utiliser les outils à votre disposition pour appliquer des actions sur la zone sélectionnée. Pour la <strong>désélectionner</strong>, relâchez le curseur puis effectuez un simple clic sur la grille.</p>
+  </body>
+</html>

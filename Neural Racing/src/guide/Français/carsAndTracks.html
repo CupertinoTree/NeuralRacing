@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Théorie</h1>
+   	<hr>
+    <h2>Voitures</h2>
+
+    <p>Une voiture est représentable comme un corps physique avec un vecteur, dont le pilote peut en contrôler direction et magnitude. Elle comporte également des caméras, et peut être associée à un conducteur pour former un <strong> individu</strong>.
+    </p>
+
+    <h4>Corps physique</h4>
+    <p>
+      Le corps physique d'une voiture est un rectangle qui l'entoure. Il est visible en rouge lorsque l'option <strong>Tracé</strong> est activée, comme sur l'image plus bas.
+    </p>
+    <h4>Vecteur</h4>
+    <p>
+      Il n'est pas possible de contrôler directement la position de la voiture. On doit pour cela contrôler son vecteur de vitesse. On peut donc changer l'angle, accélérer ou freiner. La vitesse de la voiture est donnée en permanence au réseau de neurones de l'individu.
+    </p>
+    <h4>Caméras</h4>
+    <p>
+      Pour piloter la voiture, le conducteur doit aussi voir ce qui se trouve devant lui. Pour cela, la voiture est équipée de 5 "caméras" qui sont les segments représentés sur l'image ci-dessous. Il y en a deux latérales, deux obliques avant et une frontale.
+      <br>
+      Ce que le réseau de neurone reçoit de chacun de ces capteurs, c'est une valeur de distance qui correspond à la longueur du segment. Une caméra obstruée donnera la valeur 1, tandis qu'une caméra qui voit loin devant elle donnera la valeur 0. La distance de vision maximale d'une caméra est de deux cases.
+    </p>
+
+    <p style="text-align:center">
+          <img src="../car.png" width="300" height="253">
+          <br>
+          <i>Les caméras d'une voiture. On voit également son corps physique.</i>
+        </p >
+
+    <h4>Cycle de vie</h4>
+    <p>
+      Dans le cadre de l'onglet <strong>Évolution Génétique</strong>, les voitures sont associées à un réseau de neurones pour former des individus. Chaque individu voit les valeurs des caméras et sa vitesse, et choisi comment piloter la voiture. À chaque ligne de récompense franchie, il gagne un point. S'il touche le bord du circuit, sa voiture s'arrête à cet endroit. Il se reproduira ensuite selon son score, comme expliqué dans la partie du guide portant sur <strong>l'Algorithme Génétique</strong>.
+    </p>
+    <h2>Circuits</h2>
+    <h4>Bords</h4>
+
+    <p>
+      Ils sont visibles sous forme de lignes rouges quand l'option <strong>Tracé</strong> est activée. Si une voiture en touche un, elle a perdu.
+    </p>
+
+    <h4>Lignes de récompense</h4>
+
+    <p>
+      Elles sont visibles sous forme de ligne jaune quand l'option <strong>Tracé</strong> est activée. Si une voiture en touche une, elle gagne un point.
+    </p>
+
+    <p style="text-align:center">
+          <img src="../hitbox.png" width="302" height="210">
+          <br>
+          <i>Les lignes en question.</i>
+    </p >
+
+    <h4>Fichiers</h4>
+
+    <p>
+      En plus de la liste de circuits personnelle, il est possible d'en importer/exporter, sous la forme de fichiers .gameGrid. Les circuits sont alors représentés sous forme textuelle, au format <strong>nom:typeDeCase(rotation|X|Y);</strong> où X et Y peuvent être des ensembles de cases.
+    </p>
+
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Theory</h1>
+    <hr>
+    <h2>Genetic Algorithm</h2>
+
+    <p>The genetic algorithm is a process inspired by natural selection. It operates with successive <strong>generations</strong>. During one generation, we have a <strong>population</strong> composed of individuals, each of which has genes. Each individual will be evaluated during its life and receive a <strong>fitness score</strong>. At the end of the generation, individuals reproduce. This is where selection can occur: the higher an individual's score, the more likely it is to reproduce. Random <strong>mutations</strong> are then applied to the genomes of individuals, and the next generation begins.</p>
+
+    <h4>Individuals</h4>
+
+    <p>An individual corresponds to a car and its driver, which is itself a neural network. Each of its connections represents a gene. For more information, refer to the part of the guide on <strong>Neural Networks</strong>.</p>
+
+    <h4>Population</h4>
+
+    <p>The initial population is composed of randomly generated individuals. Subsequent populations are a product of the reproduction of the previous population.</p>
+
+    <h4>Fitness</h4>
+
+    <p>Individuals earn a point each time they cross a new reward line. For more information, refer to the part of the guide on <strong>Cars and Tracks</strong>.</p>
+
+    <h4>Reproduction</h4>
+
+    <p>
+      The reproduction process works in two stages:
+      <br><br>
+      <strong>- Selection:</strong>
+      <br>
+      We want to find two parents by favoring the fittest individuals. To avoid always selecting the same ones, we use the concept of <strong>Social Mixing</strong>. We take a subgroup of the population, chosen randomly, and extract the individual with the highest fitness from it. We repeat the operation in another subgroup to obtain the second parent. <strong>Note:</strong> the parameter is adjusted in the Evolution tab as a percentage, which corresponds to the size of the subgroups relative to the total population. <strong>Lowering this parameter adds diversity</strong>.
+      <br><br>
+
+      <strong>- Merging:</strong>
+      <br>
+      The reproduction step is inspired by nature in a very simplified version. For each gene, there is a fifty-fifty chance of inheriting it from parent 1. There is no organization into chromosomes, for example.
+      <br><br>
+
+      We repeat the process until we have the right number of individuals in the next population.
+    </p>
+
+    <h4>Mutation</h4>
+
+    <p>We introduce mutations into the genes of each individual. The mutation rate corresponds to <strong>the probability for each gene to be replaced by a random value</strong>.</p>
+
+    <h2>Parallel with Our World</h2>
+
+    <h4>Environment</h4>
+
+    <p>The environment in the context of Neural Racing corresponds to the tracks. Individuals well adapted to one track will not always be suitable for others.</p> <p class="green_paragraph"> Try changing the tracks in the Experiments tab!</p>
+
+    <h4>Phenotype</h4>
+
+    <p>The phenotypes of individuals in the context of Neural Racing can be observed in the form of skills. On a track that starts with a left turn, for example, individuals will quickly acquire the "Ability to turn left" phenotype but will be unable to handle a right turn. Similarly, because time is limited, some individuals will score more points by accelerating on straight lines.</p> <p class="green_paragraph"> In the Evolution tab, insert an individual with a certain phenotype on a slightly different track to broaden the individuals' skills. Through iterations, you will have an individual adapted to many environments!</p>
+
+    <h4>Genetic Diversity</h4>
+
+    <p>We can easily explore this concept through the <strong>Mutation</strong> and <strong>Social Mixing</strong> parameters. Disable <strong>Include Champion</strong>, then try changing the parameters. For example, with a mutation rate of 100%, you will have purely random results. At 0%, you will have a convergence of individuals toward the same genome, which will be manifested by a peak on the histogram.</p>
+
+  </body>
+</html>

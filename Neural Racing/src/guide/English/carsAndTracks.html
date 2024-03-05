@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Theory</h1>
+    <hr>
+    <h2>Cars</h2>
+
+    <p>A car can be represented as a physical body with a vector, whose driver can control both direction and magnitude. It also includes cameras and can be associated with a driver to form an <strong>individual</strong>.</p>
+
+    <h4>Physical Body</h4>
+    <p>The physical body of a car is a rectangle that surrounds it. It is visible in red when the <strong>Hitbox</strong> option is activated, as shown in the image below.</p>
+
+    <h4>Vector</h4>
+    <p>It is not possible to directly control the position of the car. Instead, we control its velocity vector. Thus, we can change the angle, accelerate, or brake. The car's speed is continuously given to the individual's neural network.</p>
+
+    <h4>Cameras</h4>
+    <p>To drive the car, the individuals must also see what is in front of them. For this purpose, the car is equipped with 5 "cameras," which are the segments represented in the image below. There are two lateral, two frontal oblique, and one frontal camera.
+    <br>
+    What the neural network receives from each of these sensors is a distance value corresponding to the length of the segment. A obstructed camera will give a value of 1, while a camera that sees far ahead will give a value of 0. The maximum vision distance of a camera is two tiles.
+  </p>
+
+    <p style="text-align:center">
+      <img src="../car.png" width="300" height="253">
+      <br>
+      <i>The cameras of a car. The physical body is also visible.</i>
+    </p>
+
+    <h4>Life Cycle</h4>
+    <p>Within the <strong>Genetic Evolution</strong> tab, cars are associated with a neural network to form individuals. Each individual sees the values of the cameras and its speed, and chooses how to drive the car. Each time a reward line is crossed, it gains a point. If it touches the edge of the track, its car stops at that point. It will then reproduce based on its score, as explained in the part of the guide about the <strong>Genetic Algorithm</strong>.</p>
+
+    <h2>Tracks</h2>
+    <h4>Edges</h4>
+    <p>They are visible as red lines when the <strong>Hitbox</strong> option is activated. If a car touches one, it has lost.</p>
+
+    <h4>Reward Lines</h4>
+    <p>They are visible as yellow lines when the <strong>Hitbox</strong> option is activated. If a car touches one, it gains a point.</p>
+
+    <p style="text-align:center">
+      <img src="../hitbox.png" width="302" height="210">
+      <br>
+      <i>The lines in question.</i>
+    </p>
+
+    <h4>Files</h4>
+    <p>In addition to the personal tracks list, it is possible to import/export them in the form of .gameGrid files. The tracks are then represented in text form, in the format <strong>name:typeOfTile(rotation|X|Y);</strong> where X and Y can be sets of tiles.</p>
+
+  </body>
+</html>

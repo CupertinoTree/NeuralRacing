@@ -26,6 +26,8 @@ La documentation du code, soigneusement réalisée avec Eclipse, se trouve dans 
 Les versions Windows et macOS se trouvent dans le dossier /DOWNLOAD/
 Téléchargez la version correspondant à votre plateforme.
 
+Note : Si vous êtes un utilisateur Windows, vous devrez laisser l'application à côté du dossier JRE. Faites un raccourci vers l'application pour la mettre sur votre bureau !
+
 #### Build les sources
 
 Le code source du logiciel se trouve dans /Neural Racing/src

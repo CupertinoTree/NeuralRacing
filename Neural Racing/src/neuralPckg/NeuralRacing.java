@@ -178,9 +178,7 @@ public class NeuralRacing {
 							   networkList = new HashMap<String, String>();
 	
 	/**Le tableau contenant les différentes langues supportées par le programme.*/
-	static String [] languageArray = { "Français", "English" }; 
-	
-	private static Boolean avenirNextExists;
+	static String [] languageArray = { "Français", "English" };
 	
 	public static UIUserGuideFrame guide;
 	
@@ -464,11 +462,10 @@ public class NeuralRacing {
 		
 		GraphicsEnvironment graphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment();
 		
-		//if ((new ArrayList<String>(Arrays.asList(graphicsEnvironment.getAvailableFontFamilyNames()))).contains("Avenir Next")) { return; }
+		if ((new ArrayList<String>(Arrays.asList(graphicsEnvironment.getAvailableFontFamilyNames()))).contains("Avenir Next")) { return; }
 		
 	    try {
-	        File fontFile = new File("fonts/AvenirNext-Bold.ttf");
-	        System.out.println(fontFile.exists());
+	        File fontFile = new File(reader.getResource("/fonts/AvenirNext-Bold.ttf").toURI());
 	        Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
 	        graphicsEnvironment.registerFont(font);
 	    } catch (Exception exception) {

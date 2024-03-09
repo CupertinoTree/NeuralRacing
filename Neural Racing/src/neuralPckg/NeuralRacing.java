@@ -363,6 +363,8 @@ public class NeuralRacing {
             } catch (Exception ex) {}
 		}
 		
+		NeuralRacing.loadFont();
+		
 		menuView        = new MainMenuView(window.getSize());
 		evolutionView   = new EvolutionView(window.getSize());
 		experimentsView = new ExperimentsView(window.getSize());
@@ -456,8 +458,26 @@ public class NeuralRacing {
 	}
 	
 	/**
-	 * Cette méthode permet d'obtenir une police commune dans tout le logiciel,
-	 * en fonction des polices installées sur l'ordinateur.
+	 * Cette fonction récupère la police Avenir Next si elle n'existe pas déjà dans le système.
+	 */
+	private static void loadFont() {
+		
+		GraphicsEnvironment graphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		
+		//if ((new ArrayList<String>(Arrays.asList(graphicsEnvironment.getAvailableFontFamilyNames()))).contains("Avenir Next")) { return; }
+		
+	    try {
+	        File fontFile = new File("fonts/AvenirNext-Bold.ttf");
+	        System.out.println(fontFile.exists());
+	        Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
+	        //graphicsEnvironment.registerFont(font);
+	    } catch (Exception exception) {
+	        JOptionPane.showMessageDialog(null, exception.getMessage());
+	    }
+	}
+	
+	/**
+	 * Cette méthode permet d'obtenir une police commune dans tout le logiciel.
 	 * 
 	 * @param type
 	 * Le type de la police.
@@ -470,12 +490,7 @@ public class NeuralRacing {
 	 * @see Font
 	 */
 	public static Font getSystemFont(int type, int size) {
-		
-		if (avenirNextExists == null) {
-			avenirNextExists = (new ArrayList<String>(Arrays.asList(GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames()))).contains("Avenir Next");
-		}
-		
-		return new Font((avenirNextExists ? "Avenir Next" : "Gill Sans MT"), type, size);
+		return new Font("Avenir Next", type, size);
 	}
 	
 	/**

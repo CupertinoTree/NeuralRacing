@@ -8,10 +8,10 @@ On débute avec une première génération dont les réseaux de neurones sont al
 
 #### Quelques screenshots de l'interface :
 
-<img width="700" alt="NR" src="https://github.com/CupertinoTree/NeuralRacing/assets/37226540/27e0e953-3615-4306-9a14-e379a9acbcf3">
-<img width="700" alt="Edt" src="https://github.com/CupertinoTree/NeuralRacing/assets/37226540/a5bb7896-ee7c-44a5-a66a-4fa1814c386e">
-<img width="700" alt="Exp" src="https://github.com/CupertinoTree/NeuralRacing/assets/37226540/4cb4f9cc-5776-4b97-b990-3f16bd66a389">
-<img width="600" alt="Gd" src="https://github.com/CupertinoTree/NeuralRacing/assets/37226540/327eb5f5-6792-4587-989e-2e46d909407e">
+<img width="700" alt="Ev" src="https://github.com/CupertinoTree/NeuralRacing/assets/37226540/60c8f481-68f9-4855-997a-dac4a531f4ac">
+<img width="700" alt="Exp" src="https://github.com/CupertinoTree/NeuralRacing/assets/37226540/82bca54b-ddfb-4271-9829-8201cf381f68">
+<img width="700" alt="Rt" src="https://github.com/CupertinoTree/NeuralRacing/assets/37226540/9288925d-afb7-4c72-90b8-0c0a4e00025f">
+<img width="600" alt="Guide" src="https://github.com/CupertinoTree/NeuralRacing/assets/37226540/fe728ab1-1609-48f7-99af-9ca47e6bbb3f">
 
 ## Documentation
 

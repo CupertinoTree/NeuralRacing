@@ -210,6 +210,7 @@ public class UIUserGuideFrame extends JFrame {
 		tableView.add(geneticAlgorithm);
 		
 		webViewer = new JEditorPane();
+		webViewer.setContentType("text/html;charset=UTF-8");
 		webViewer.setEditable(false);
 		webViewer.setHighlighter(null);
 		webViewer.setPreferredSize(new Dimension(500, 600));

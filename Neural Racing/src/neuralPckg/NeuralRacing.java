@@ -468,9 +468,7 @@ public class NeuralRacing {
 	        File fontFile = new File(reader.getResource("/fonts/AvenirNext-Bold.ttf").toURI());
 	        Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
 	        graphicsEnvironment.registerFont(font);
-	    } catch (Exception exception) {
-	        JOptionPane.showMessageDialog(null, exception.getMessage());
-	    }
+	    } catch (Exception exception) {}
 	}
 	
 	/**
